@@ -28,3 +28,19 @@ canvas.addEventListener('mousedown',(e) =>{
     y = e.offsetY;
     // console.log(isPressed,x,y);
 })
+
+canvas.addEventListener('mousemove',(e) =>{
+    if(isPressed) {
+    const x2 = e.offsetX;
+    const y2 = e.offsetY;
+
+    drawCircle(x2,y2);
+    }
+})
+
+canvas.addEventListener('mouseup',(e) =>{
+    isPressed = false;
+    x = undefined;
+    y = undefined;
+    // console.log(isPressed,x,y);
+})
